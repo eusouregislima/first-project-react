@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Routes from './routes';
+import GlobalStyles from './Styles/globalStyles';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// nota: quando exporto com default fica assim
+// quando exporto sem uso os {}
+// o fragment só serve para cumprir a regra do react
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <Routes/> 
+        <GlobalStyles />
+    </React.StrictMode>
+
+
+)
+
+
+
+// Sempre saduiche no react
+// essa parte significa que vou criar os meus componentes App que vai ser renderizado na div root.
+
+
